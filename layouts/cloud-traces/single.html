@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="trace">
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <section class="trace-meta">
+    <section class="trace-body">
+      {{ .Content }}
+
+    </section>
+
+    <ul>
+      <li><strong>Owner:</strong>
+        {{ .Params.owner }}
+        (<a href="mailto:{{ .Params.owner_email }}">{{ .Params.owner_email }}</a>)
+      </li>
+      <li><strong>Source:</strong>
+        <a href="{{ .Params.source_url }}">{{ .Params.source }}</a>
+      </li>
+      <li><strong>Release date:</strong>
+        {{ .Date.Format "January 2, 2006" }}
+      </li>
+      <li><strong>Version:</strong>
+        <a href="{{ .Params.format_url }}">{{ .Params.version }}</a>
+      </li>
+      <li><strong>Data range:</strong>
+        {{ .Params.data_start }} – {{ .Params.data_end }}
+      </li>
+      {{ if .Params.epoch }}
+      <li><strong>Epoch:</strong> {{ .Params.epoch }}</li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="trace-download">
+    <a href="{{ .Params.download_url }}">Download the trace</a>
+    ({{ .Params.download_size }})
+  </section>
+
+  <p>Please contact the data owner for using this data for any research purpose prior
+    to release and acknowledge the source of the data in any published material based
+    on it.
+  </p>
+</article>
+{{ end }}

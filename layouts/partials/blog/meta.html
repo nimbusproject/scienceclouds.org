@@ -1,0 +1,15 @@
+<div class="meta">
+    <span>
+        Posted
+        <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span>
+            {{ if .Params.author }}
+            by {{ .Params.author }}
+            {{ end }}
+        </span>
+        {{ with .GetTerms "categories" }}
+        in 
+            {{ range . }}<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}
+        {{ end }}
+    </span>
+</div>

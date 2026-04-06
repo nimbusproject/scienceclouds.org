@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="customify-grid">
+  <div class="customify-col-8">
+    <article id="post-{{ .File.BaseFileName }}"
+      class="entry entry-single post-{{ .File.BaseFileName }} post type-post status-publish format-standard has-post-thumbnail hentry">
+      <h1 class="entry-title entry--item h2">{{ .Title }}</h1>
+
+      {{ partial "blog/meta.html" . }}
+
+      <div class="entry-content entry--item">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</div>
+{{ end }}

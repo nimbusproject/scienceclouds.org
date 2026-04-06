@@ -1,0 +1,24 @@
+<article class="post-item">
+  <h2>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </h2>
+  {{ if .Params.subtitle }}
+  <h3>
+    {{ .Params.subtitle }}
+  </h3>
+  {{ end }}
+
+  {{ if not .Params.HideMeta }}
+  {{ partial "blog/meta.html" . }}
+  {{ end }}
+
+  <div class="post-content">
+    {{ if .Params.abstract }}
+    {{ .Params.abstract | safeHTML}}
+    {{ else if not .Params.HideMeta }}
+    {{ .Summary | safeHTML }}
+
+    <a href="{{ .Permalink }}" class="read-more">Read more</a>
+    {{ end }}
+  </div>
+</article>
