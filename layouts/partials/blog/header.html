@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header{{ if .IsHome }} site-header--home{{ end }}">
     <nav role="navigation">
       <a class="brand" id="logo" title="Cloud computing for science"
         href="{{ "/" | relURL }}"><span>Science<br>Clouds</span>
