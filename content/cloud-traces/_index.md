@@ -10,7 +10,7 @@ Traces from existing parallel and distributed computing systems are a useful res
 
 We have developed a [trace data structure](cloud-trace-format) based on data from OpenStack Nova/Blazar/Ironic services, as well as [software](https://github.com/ChameleonCloud/starcompactor) to extract the appropriate data. We are making available data from the OpenStack cloud operated by the [Chameleon testbed](https://www.chameleoncloud.org/) for educational projects.
 
-You can find [these traces below](#list-of-cloud-traces).
+{{< trace-list >}}
 
 We released Chameleon cloud traces to enable researchers to run their experiment and/or simulations with more realistic scientific testbed data. It would be a huge encouragement to us to see your works using our cloud traces. If you use our data in your research, it would be great to let us know. You can find our contact information [here](/contact).
 
@@ -39,5 +39,3 @@ The commercial cloud providers have released their cloud traces, and numerous re
 - [Alibaba cluster data](https://github.com/alibaba/clusterdata)
 - [Google cluster data](https://github.com/google/cluster-data)
 
-
-## List of Cloud Traces

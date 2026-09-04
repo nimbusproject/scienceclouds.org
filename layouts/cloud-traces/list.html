@@ -1,0 +1,7 @@
+{{/* Cloud traces are a reference index, not a feed. _index.md places the full
+     list inline via the {{< trace-list >}} shortcode, so this template just
+     renders the content and never paginates. The blog keeps its normal paging
+     through _default/list.html. */}}
+{{ define "main" }}
+{{ .Content }}
+{{ end }}
